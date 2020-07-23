@@ -1,0 +1,24 @@
+# wp-contentを除くルートの全てを除外
+/*
+## ルートの監視対象
+!wp-content/
+!/.gitignore
+
+# 一部を除くwp-content以下のディレクトリを除外
+wp-content/*
+## 対象外のディレクトリ
+!wp-content/plugins/
+
+# 一部を除くプラグインを除外
+wp-content/plugins/*
+## 対象外のプラグイン
+!wp-content/plugins/wpzoomup-*/
+
+
+# nodeの依存ファイルを除外
+node_modules/
+
+# ログとDB関連のファイルを除外
+*.log
+*.sql
+*.sqlite
