@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/**
+ * WP ZoomUP styles
+ */
+ 
+// ======================================== Config and Functions
+@import "config";
+
+// ======================================== BASE STYLES
+@import "base";
+
+// ======================================== UTILITY STYLES
+@import "utility";
+
+
+// ======================================== COMPONENT STYLES
+@import "components";
+
+// ======================================== WP BLOCK STYLES
+@import "wp_block";
+
+// ======================================== GLOBAL STYLES
+@import "global";
+
+// ======================================== PAGES, SINGLE STYLES
+@import "pages";
