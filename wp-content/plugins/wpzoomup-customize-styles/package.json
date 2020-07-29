@@ -1,0 +1,30 @@
+{
+  "name": "wpzoomup-my-snow-monkey",
+  "version": "1.0.0",
+  "description": "css file for wpzoomup",
+  "author": "rocket martue",
+  "license": "GPL-2.0+",
+  "scripts": {
+    "css": "yarn build-css && yarn autoprefixer",
+    "build-css": "node-sass --output-style expanded --indent-width 4 src/scss/style.scss src/css/style.css & node-sass --output-style expanded --indent-width 4 src/scss/editor-style.scss src/css/editor-style.css",
+    "autoprefix": "npx postcss src/**/*.css --use autoprefixer -d src/ --no-map",
+    "watch": "node-sass src/scss/ --output src/css/ -r -w -- npm run css"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "node-sass": "^4.13.1",
+    "node-sass-import": "^2.0.1",
+    "onchange": "^6.1.0",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^7.1.0"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead",
+    "ie >= 11",
+    "iOS >= 9",
+    "Android >= 4.4"
+  ]
+}

@@ -31,4 +31,24 @@ define( 'WPZOOMUP_CUSTOMIZE_STYLES_URL', untrailingslashit( plugin_dir_url( __FI
  */
 define( 'WPZOOMUP_CUSTOMIZE_STYLES_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 
+/**
+ * Custom Functions
+ * functions ディレクトリの中にある php files を読み込みます。
+ * その際、ファイル名がアンダースコアで始まるもの（例：_example.php）は、インクルードしません。
+ */
+$dir = trailingslashit( WPZOOMUP_CUSTOMIZE_STYLES_PATH ).'functions/';
+if ( ! file_exists( $dir) ) {
+	$functions = WPZOOMUP_CUSTOMIZE_STYLES_PATH . 'functions';
+	mkdir( $functions );
+} else {
+	opendir( $dir );
+	while( ( $file = readdir() ) !== false ) {
+		if( ! is_dir( $file ) && ( strtolower( substr( $file, -4 ) ) == ".php" ) && ( substr( $file, 0, 1 ) != "_" ) ) {
+			$load_file = $dir.$file;
+			require_once( $load_file );
+		}
+	}
+	closedir();
+}
+
 require WPZOOMUP_CUSTOMIZE_STYLES_PATH . '/include/classes/class-wpzoomup-customize-style-base.php';

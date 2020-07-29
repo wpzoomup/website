@@ -14,6 +14,13 @@ WPZoomUP Customize Styles プラグインディレクトリへの URL
 
 WPZoomUP Customize Styles プラグインディレクトリへの ファイルパス
 
+### SCSSのコンパイル方法
+
+プラグインディレクトリーまで移動したあと、
+- yarn でpackegeをインストール（ npm i と同じ意味のコマンド）
+- yarn watchでSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
+- yarn cssでCSSにコンパイル（コマンド走ったときだけCSSをコンパイル）
+
 ## 謝辞
 
 このプラグインは キタジマタカシさん（[@inc2734]( https://twitter.com/inc2734 )）が作成されたMy Snow Monkey (v0.2.1)を使用して作成しました。
