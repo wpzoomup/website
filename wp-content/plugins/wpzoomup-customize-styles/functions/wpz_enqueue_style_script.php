@@ -5,7 +5,7 @@ function wpz_enqueue_style_script() {
 		'wpz_style',
 		WPZOOMUP_CUSTOMIZE_STYLES_URL . '/src/css/style.css',
 		[],
-		filemtime( WPZOOMUP_CUSTOMIZE_STYLES_URL . '/src/css/style.css' )
+		filemtime( WPZOOMUP_CUSTOMIZE_STYLES_PATH . '/src/css/style.css' )
 	);
 	/*
 	wp_enqueue_script(
