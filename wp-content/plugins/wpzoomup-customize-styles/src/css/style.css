@@ -1,3 +1,110 @@
+@charset "UTF-8";
 /**
  * WP ZoomUP styles
  */
+@media (min-width: 64em) {
+  .c-site-branding .custom-logo,
+  .wpaw-site-branding__logo .custom-logo {
+    height: auto;
+    width: 140px; } }
+
+/* 見出し */
+.smb-section__title {
+  font-weight: 400; }
+
+.smb-section__title::after {
+  width: 100px;
+  height: 3px;
+  background-color: #F66F20; }
+
+.smb-section__title + .smb-section__lede {
+  margin-top: 1em; }
+
+/* ボタン */
+.smb-btn {
+  background: #297B0D;
+  border-radius: 100px; }
+
+.c-page-top {
+  background-color: #F66F20;
+  border-radius: 100%; }
+
+/* TOP Connpass最新 */
+.z-connpass ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.z-connpass li {
+  margin: 0;
+  width: 48%; }
+
+.z-connpass .smb-section__body > ul > li + li {
+  margin: 0; }
+
+@media (max-width: 599px) {
+  .z-connpass ul {
+    display: block; }
+  .z-connpass li {
+    width: auto; } }
+
+/* TOP WP ZoomUPについて */
+.z-top-about {
+  background: linear-gradient(304.59deg, #FFCF51 44.84%, #FFEE57 101.19%); }
+
+.z-top-about .smb-section__title::after {
+  background-color: #FFF; }
+
+.z-top-about .wp-block-image {
+  text-align: center; }
+
+.z-top-about .wp-block-image img {
+  width: auto;
+  height: auto;
+  max-height: 192px; }
+
+.z-top-about h3 {
+  text-align: center;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #F66F20; }
+
+.z-top-about .wp-block-column:nth-child(even) h3 {
+  border-bottom: 2px solid #53A537; }
+
+@media (min-width: 782px) {
+  .z-top-about .wp-block-column:not(:first-child) {
+    margin-left: calc(var(--_space, 1.76923rem)*1*var(--_margin-scale, 2.5)); } }
+
+/* TOP これまでの開催 ＆ 下層アーカイブ */
+@media (min-width: 40em) {
+  .smb-section__inner > .c-container {
+    padding-right: 10%;
+    padding-left: 10%; }
+  .c-entries__item {
+    padding-right: calc(var(--_space, 1.76923rem)*0.5*var(--_margin-scale, 2.2));
+    padding-left: calc(var(--_space, 1.76923rem)*0.5*var(--_margin-scale, 2.2));
+    margin-bottom: calc(var(--_space, 1.76923rem)*1*var(--_margin-scale, 3)); }
+  .c-entry-summary__title {
+    font-size: 1.125rem; }
+  .c-meta {
+    display: flex;
+    justify-content: space-between; } }
+
+.c-entry-summary__term {
+  display: none; }
+
+.c-entry-summary__content {
+  display: none; }
+
+.c-entry-summary__title {
+  font-weight: 400; }
+
+.c-entry-summary__meta {
+  text-align: left;
+  font-weight: 400; }
+
+.c-meta__item--author img {
+  border-radius: 0; }
