@@ -18,7 +18,7 @@ WPZoomUP Customize Styles プラグインディレクトリへの ファイル�
 
 プラグインディレクトリーまで移動したあと、
 - yarn でpackegeをインストール（ npm i と同じ意味のコマンド）
-- yarn watchでSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）
+- yarn watchでSCSSファイルの修正を常時監視（SCSSを修正したら即時CSSにコンパイルしてくれる）※ windows の場合は、yarn watch-sass
 - yarn cssでCSSにコンパイル（コマンド走ったときだけCSSをコンパイル）
 
 ## 謝辞
