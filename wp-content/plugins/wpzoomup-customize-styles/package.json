@@ -6,17 +6,18 @@
   "license": "GPL-2.0+",
   "scripts": {
     "css": "yarn build-css && yarn autoprefixer",
-    "build-css": "node-sass --output-style expanded --indent-width 4 src/scss/style.scss src/css/style.css & node-sass --output-style expanded --indent-width 4 src/scss/editor-style.scss src/css/editor-style.css",
+    "build-css": "node-sass --output-style expanded --indent-width 1 --indent-type tab src/scss/style.scss src/css/style.css & node-sass --output-style expanded --indent-width 1 --indent-type tab src/scss/editor-style.scss src/css/editor-style.css",
     "autoprefix": "npx postcss src/**/*.css --use autoprefixer -d src/ --no-map",
-    "watch": "node-sass src/scss/ --output src/css/ -r -w -- npm run css"
+    "watch-sass": "onchange \"src/scss/*.scss\" -- npm run css",
+    "watch": "onchange 'src/scss/*.scss' -e '**/*.DS_Store' -- npm run css"
   },
   "dependencies": {
-    "autoprefixer": "^9.7.4",
-    "node-sass": "^4.13.1",
+    "autoprefixer": "^9.8.6",
+    "node-sass": "^4.14.1",
     "node-sass-import": "^2.0.1",
-    "onchange": "^6.1.0",
-    "postcss": "^7.0.26",
-    "postcss-cli": "^7.1.0"
+    "onchange": "^7.0.2",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1"
   },
   "browserslist": [
     "last 2 version",
