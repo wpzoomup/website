@@ -140,6 +140,25 @@
 	border-radius: 0;
 }
 
+/* footer sns icon */
+@media (min-width: 40em) {
+	.p-social-nav .c-navbar__item {
+		margin: 0px 1.25em;
+	}
+}
+
+#menu-social .svg-inline--fa {
+	height: 2em;
+	width: 2em;
+}
+
+@media (min-width: 40em) {
+	#menu-social .svg-inline--fa {
+		height: 5em;
+		width: 5em;
+	}
+}
+
 /* グローバルナビ */
 @media (min-width: 1024px) {
 	.menu-item-has-children:after {
