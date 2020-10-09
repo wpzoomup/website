@@ -146,14 +146,36 @@
     border-radius: 0;
 }
 
-/* グローバルナビ */
-.menu-item-has-children:after {
-    @media (min-width: 1024px) {
-        content: '▼';
-        font-size: .5em;
-        position: absolute;
-        right: 5px;
-        top: 50%;
-        transform: translateY(-50%);
+/* footer sns icon */
+
+.p-social-nav .c-navbar__item {
+    @media (min-width: 40em) {
+        margin: 0px 1.25em;
     }
+}
+
+#menu-social .svg-inline--fa {
+    height: 2em;
+    width: 2em;
+    @media (min-width: 40em) {
+        height: 5em;
+        width: 5em;
+    }
+}
+
+//* menu pege page header */
+//.page-id-4862 .c-page-header__bgimage>img {
+//    object-fit: cover;
+//}
+
+/* グローバルナビ */
+@media (min-width: 1024px) {
+	.menu-item-has-children:after {
+		content: '▼';
+		font-size: .5em;
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
