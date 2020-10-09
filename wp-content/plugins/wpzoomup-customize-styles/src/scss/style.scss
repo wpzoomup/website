@@ -145,3 +145,15 @@
 .c-meta__item--author img {
     border-radius: 0;
 }
+
+/* グローバルナビ */
+.menu-item-has-children:after {
+    @media (min-width: 1024px) {
+        content: '▼';
+        font-size: .5em;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
