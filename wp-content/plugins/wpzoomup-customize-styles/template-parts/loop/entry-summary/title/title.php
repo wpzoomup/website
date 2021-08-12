@@ -3,19 +3,29 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.7.0
+ * @version 14.2.0
  */
 
 use Framework\Helper;
 
-$template_args = [
-	'title_tag' => Helper::get_var( $_title_tag, 'h2' ),
-];
+$args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+	$args,
+	// phpcs:enable
+	[
+		'_entries_layout' => 'rich-media',
+		'_title_tag'      => 'h2',
+	]
+);
 
-$layout    = get_theme_mod( get_post_type() . '-entries-layout' );
-$title_tag = $template_args['title_tag'];
+$title = get_the_title();
+if ( ! $title ) {
+	return;
+}
+
+$title_tag = $args['_title_tag'];
 ?>
 
 <<?php echo esc_html( $title_tag ); ?> class="c-entry-summary__title">
-<?php the_title(); ?>
+	<?php the_title(); ?>
 </<?php echo esc_html( $title_tag ); ?>>
