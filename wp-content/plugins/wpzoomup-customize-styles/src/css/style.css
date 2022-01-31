@@ -101,10 +101,6 @@
 
 /* TOP これまでの開催 ＆ 下層アーカイブ */
 @media (min-width: 40em) {
-	.smb-section__inner > .c-container {
-		padding-right: 10%;
-		padding-left: 10%;
-	}
 	.c-entries__item {
 		padding-right: calc(var(--_space, 1.76923rem)*0.5*var(--_margin-scale, 2.2));
 		padding-left: calc(var(--_space, 1.76923rem)*0.5*var(--_margin-scale, 2.2));
